@@ -490,3 +490,120 @@ button {
     padding: 6px 14px;
   }
 }
+
+/* Package Specific Borders */
+.starter-package {
+  /* border: 3px solid #a85a5a; */
+}
+
+.basic-package {
+  color: #554144;
+
+  .card-tag {
+    background: #554144;
+  }
+
+  .card-content {
+    border: 4.8px solid #554144;
+  }
+
+  .price {
+    color: #554144;
+  }
+
+  .btn-card {
+    background-color: #554144;
+    color: #F4E9E1;
+  }
+
+}
+
+.deluxe-package {
+  --delux-package-color: #4A8769;
+  color: var(--delux-package-color);
+
+  .card-tag {
+    background: var(--delux-package-color);
+  }
+
+  .card-content {
+    border: 4.8px solid var(--delux-package-color);
+  }
+
+  .price {
+    color: var(--delux-package-color);
+  }
+
+  .btn-card {
+    background-color: var(--delux-package-color);
+    color: #F4E9E1;
+  }
+
+  .price {
+    border-top: 2.08px solid var(--delux-package-color);
+    margin-bottom: 13.12px;
+    color: var(--delux-package-color);
+  }
+
+}
+
+.premium-package {
+  --premium-package-color: #D64F34;
+  color: var(--premium-package-color);
+
+  .card-tag {
+    background: var(--premium-package-color);
+  }
+
+  .card-content {
+    border: 4.8px solid var(--premium-package-color);
+  }
+
+  .btn-card {
+    background-color: var(--premium-package-color);
+    color: #F4E9E1;
+  }
+
+  .price {
+    color: var(--premium-package-color);
+    border-top: 2.08px solid var(--premium-package-color);
+    margin-bottom: 13.12px;
+    color: var(--premium-package-color);
+  }
+}
+
+.elite-package {
+  color: #F4E9E1;
+
+  .card-tag {
+    background: #232323;
+    border: 4.8px solid #D64F34;
+    border-bottom: none;
+  }
+
+  .card-content {
+    border: 4.8px solid #D64F34;
+    color: #F4E9E1;
+    background: #232323;
+  }
+
+  .price {
+    color: var(--elite-package-color);
+  }
+
+  .btn-card {
+    background-color: var(--elite-package-color);
+    color: #F4E9E1;
+  }
+
+  .price {
+    border-top: 2.08px solid #F4E9E1;
+    margin-bottom: 13.12px;
+    color: #F4E9E1;
+  }
+
+  .btn-card {
+    color: #131309;
+    background: #F4E9E1;
+  }
+}
