@@ -92,7 +92,7 @@ button {
   position: relative;
   text-align: center;
 
-  background: url('hero-banner.png');
+  background: url('/hero-banner.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
