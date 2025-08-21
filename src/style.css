@@ -148,9 +148,10 @@ button {
 
 .timer {
   display: flex;
+  display: flex;
   align-items: center;
   padding-block: 26.95px;
-  padding-inline: 66px;
+  padding-inline: 58px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -158,9 +159,7 @@ button {
   background-color: #554144;
   border-radius: 67.38px;
   border: 7.51px solid #654D51;
-
   gap: 46px;
-
   width: 100%;
   max-width: 780px;
 }
@@ -243,15 +242,23 @@ button {
 
 .discount-section .discount-btn {
   font-weight: 500;
-  font-style: Medium;
   font-size: 20px;
   line-height: 1.5;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   border-radius: 99px;
   background-color: #D64F34;
   border: 3px solid #C23E24;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
+
+.discount-section .discount-btn:hover {
+  background-color: #C23E24;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(214, 79, 52, 0.12);
+}
+
+
 
 
 @media (max-width: 795px) {
@@ -267,16 +274,16 @@ button {
   .timer {
     flex-direction: column;
     padding: 20px;
-    gap: 10px;
+    gap: 20px;
     /* margin-inline: 20px; */
     width: auto;
     border: none;
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 46px;
-    padding-right: 46px;
+    padding-left: 62px;
+    padding-right: 62px;
     border-radius: 999px;
-    width: calc(100% - 40px);
+    /* max-width: 500px; */
   }
 
   .timer-heading {
@@ -309,12 +316,73 @@ button {
     font-weight: 800;
     font-size: 17.48px;
     line-height: 108%;
-    letter-spacing: 0%;
     text-transform: uppercase;
 
   }
+
+  .discount-section hgroup .discount-heading {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 45px;
+    line-height: 1.08;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
 }
 
+@media (max-width: 600px) {
+  .timer-count-down {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .timer {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .timer-heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.08;
+    text-transform: uppercase;
+  }
+
+  .discount-section hgroup .discount-heading {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1.08;
+    text-align: center;
+    text-transform: uppercase;
+    margin-inline: 100px;
+  }
+
+  .discount-section hgroup .discount-text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 108%;
+    text-align: center;
+  }
+
+  .discount-brands .brand-item svg {
+    width: auto;
+    max-width: 100px;
+  }
+
+
+  .discount-section .discount-btn {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 1.08;
+    text-transform: uppercase;
+    border: none;
+    padding: 9px 28px;
+  }
+
+}
 
 /* ===== Mobile Only Section ===== */
 .mobile-only-section {
@@ -334,10 +402,11 @@ button {
 }
 
 .sale-title {
+  color: #D64F34;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.08;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
 
   margin-bottom: 19px;
@@ -459,10 +528,12 @@ button {
 }
 
 .double-entries-notification .notiication-sub-title {
+  color: #4A8769;
   font-weight: 500;
   font-size: 12px;
   line-height: 108%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
+  margin-top: 10px;
 }
 
 .double-entries-notification .notification-inner {
@@ -492,6 +563,7 @@ button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 11px;
+  align-items: center;
 }
 
 /* .limited-text {
@@ -536,10 +608,10 @@ button {
 }
 
 .progress-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
-  color: #666;
-  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 108%;
+  letter-spacing: 0;
 }
 
 /* Hide mobile section on desktop */
@@ -587,6 +659,25 @@ button {
   flex-direction: column;
   align-items: start;
   max-width: 366px;
+  position: relative;
+  /* Add this for badge positioning */
+}
+
+/* Badge styles */
+.package-badge {
+  position: absolute;
+  top: -56px;
+  right: 31px;
+  z-index: 10;
+  padding: 8px 16px;
+  /* max-width: 72px; */
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #F4E9E1;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
 }
 
 .card-tag {
@@ -684,11 +775,14 @@ button {
 }
 
 .checkout-title {
-  color: #5a3c3c;
-  font-size: 1.25rem;
+  color: #554144;
+  font-family: var(--font-main);
   font-weight: 500;
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: 0%;
+  text-align: center;
   margin-bottom: 24px;
-  line-height: 1.3;
 }
 
 .checkout-methods {
@@ -743,6 +837,10 @@ button {
 /* .starter-package {
 
 } */
+
+.card-tag {
+  text-transform: uppercase;
+}
 
 .basic-package {
   color: #554144;
@@ -805,6 +903,7 @@ button {
 
   .card-content {
     border: 4.8px solid var(--premium-package-color);
+    height: 100%;
   }
 
   .btn-card {
@@ -821,6 +920,7 @@ button {
 }
 
 .elite-package {
+  max-width: 368px;
   color: #F4E9E1;
   /* background: inherit; */
 
@@ -855,5 +955,24 @@ button {
   .btn-card {
     color: #131309;
     background: #F4E9E1;
+  }
+}
+
+.svg-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  margin-top: -28px;
+}
+
+.svg-full-width {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 795px) {
+  .svg-container {
+    display: none;
   }
 }
