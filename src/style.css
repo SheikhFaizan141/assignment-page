@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --font-main: 'Open Sans', Arial, sans-serif;
+  --font-secondary: 'Montserrat', system-ui, sans-serif;
+}
 
 /* Reset */
 * {
@@ -13,7 +18,7 @@ ul {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-main);
   background: #fdf9f6;
   color: #333;
   line-height: 1.6;
@@ -67,7 +72,6 @@ button {
 }
 
 .capsule .capsule-text {
-  font-family: Greycliff CF;
   font-weight: 800;
   font-size: 11px;
   line-height: 1.08;
@@ -210,7 +214,6 @@ button {
 }
 
 .discount-section hgroup .discount-heading {
-  font-family: Greycliff CF;
   font-weight: 700;
   font-style: Bold;
   font-size: 45px;
@@ -222,7 +225,6 @@ button {
 }
 
 .discount-section hgroup .discount-text {
-  font-family: Greycliff CF;
   font-weight: 600;
   font-style: Demi Bold;
   font-size: 18px;
@@ -240,7 +242,6 @@ button {
 }
 
 .discount-section .discount-btn {
-  font-family: Greycliff CF;
   font-weight: 500;
   font-style: Medium;
   font-size: 20px;
@@ -254,19 +255,28 @@ button {
 
 
 @media (max-width: 795px) {
+  .discount-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .discount-brands {
+    gap: 30px 15px;
+  }
+
   .timer {
     flex-direction: column;
     padding: 20px;
-    gap: 20px;
+    gap: 10px;
     /* margin-inline: 20px; */
     width: auto;
     border: none;
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 62px;
-    padding-right: 62px;
+    padding-left: 46px;
+    padding-right: 46px;
     border-radius: 999px;
-    /* max-width: 500px; */
+    width: calc(100% - 40px);
   }
 
   .timer-heading {
@@ -324,7 +334,6 @@ button {
 }
 
 .sale-title {
-  font-family: Greycliff CF;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.08;
@@ -336,7 +345,6 @@ button {
 
 .sale-subtitle {
   color: #554144;
-  font-family: Greycliff CF;
   font-weight: 800;
   font-size: 35px;
   line-height: 1.08;
@@ -363,27 +371,29 @@ button {
 }
 
 .sale-timer {
-  background: #333;
-  color: white;
+  background: #D64F34;
+  color: #F4E9E1;
   padding: 1.5rem;
   border-radius: 12px;
   margin: 0 auto;
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
-.timer-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+.sale-timer .timer-title {
+  color: #F4E9E1;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 108%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 11px;
 }
 
 .timer-display {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
+  align-items: baseline;
 }
 
 .timer-unit {
@@ -392,11 +402,18 @@ button {
   align-items: center;
 }
 
-.timer-number {
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1;
+.sale-timer .timer-number {
+  font-family: var(--font-secondary);
+  font-weight: 800;
+  font-size: 13.97px;
+  line-height: 108%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2.61px solid #F4E9E1;
+  padding: 13px 11px;
+  border-radius: 999px;
+  background-color: #554144;
 }
 
 .timer-label {
@@ -426,7 +443,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 700;
   font-size: 1rem;
   border: 2px solid #A2AB87;
@@ -442,7 +459,6 @@ button {
 }
 
 .double-entries-notification .notiication-sub-title {
-  font-family: Greycliff CF;
   font-weight: 500;
   font-size: 12px;
   line-height: 108%;
@@ -591,7 +607,6 @@ button {
 }
 
 .card-content .card-heading {
-  font-family: Greycliff CF;
   font-weight: 800;
   font-style: Extra Bold;
   font-size: 27.97px;
@@ -609,7 +624,6 @@ button {
 }
 
 .card-list .list-item {
-  font-family: Greycliff CF;
   font-weight: 600;
   font-size: 18.65px;
   line-height: 1.11;
@@ -623,7 +637,6 @@ button {
 }
 
 .package-card .amount {
-  font-family: Greycliff CF;
   font-weight: 800;
   font-size: 35px;
   line-height: 1.62;
@@ -643,7 +656,6 @@ button {
 
 .package-card .btn-card {
   width: 100%;
-  font-family: Greycliff CF;
   font-weight: 800;
   font-size: 16.62px;
   line-height: 1.08;
@@ -728,9 +740,9 @@ button {
 }
 
 /* Package Specific Borders */
-.starter-package {
-  /* border: 3px solid #a85a5a; */
-}
+/* .starter-package {
+
+} */
 
 .basic-package {
   color: #554144;
@@ -811,13 +823,13 @@ button {
 .elite-package {
   color: #F4E9E1;
   /* background: inherit; */
-  
+
   .card-tag {
     background: #232323;
     border: 4.8px solid #D64F34;
     border-bottom: none;
   }
-  
+
   .card-content {
     box-shadow: 0px 3.2px 52px 0px #C6573E80;
     border: 4.8px solid #D64F34;
